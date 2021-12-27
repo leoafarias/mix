@@ -78,3 +78,4 @@ build/
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 demo/.fvm/flutter_sdk
+*.tsbuildinfo
