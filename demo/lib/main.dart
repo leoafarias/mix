@@ -38,16 +38,31 @@ class MyApp extends StatelessWidget {
           initialRoute: '/',
           routes: {
             '/': (context) => const AppShell(),
+            // Documentation
             '/docs/headless/alert-dialog': (context) =>
                 const HeadlessAlertDialogX(),
             '/docs/headless/card': (context) => const HeadlessCardX(),
             '/docs/headless/checkbox': (context) => const HeadlessCheckboxX(),
             '/docs/headless/chip': (context) => const HeadlessChipX(),
+            // Documentation on https://www.fluttermix.com/docs/concepts/mixable-widgets
+            '/docs/mixable_widgets/box': (context) =>
+                const MixableWidgetsCatalogBox(),
+            '/docs/mixable_widgets/text_mix': (context) =>
+                const MixableWidgetsCatalogTextMix(),
+            '/docs/mixable_widgets/pressable': (context) =>
+                const MixableWidgetsCatalogPressable(),
+            // Documentation on https://www.fluttermix.com/docs/concepts/variants
             '/docs/variants': (context) => const VariantsDefaultExample(),
             '/docs/variants/or': (context) => const VariantsOrOperator(),
             '/docs/variants/and': (context) => const VariantsAndOperator(),
+            '/docs/variants/not': (context) => const VariantsNotOperator(),
+            '/docs/variants/usage': (context) =>
+                const VariantsDarkLightExample(),
+            // Documentation on https://www.fluttermix.com/docs/concepts/variants#variants-catalog
             '/docs/variants/catalog/pressable': (context) =>
                 const VariantsCatalogPressable(),
+            '/docs/variants/catalog/text_styling': (context) =>
+                const VariantsTextStylingExample(),
           },
           onUnknownRoute: (settings) {
             return PageRouteBuilder(pageBuilder: (context, _, __) {

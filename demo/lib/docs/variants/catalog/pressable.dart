@@ -52,7 +52,9 @@ class VariantsCatalogPressable extends StatelessWidget {
               Pressable(
                 onPressed: () {},
                 child: Box(
-                  mix: mix,
+                  mix: Mix<Attribute>(
+                    border(width: 1.0, color: Colors.transparent),
+                  ).apply(mix),
                   child: child,
                 ),
               ),

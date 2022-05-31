@@ -82,7 +82,7 @@ variant is not called. For example:
 
 ```dart highlight="2-4"
 final mix = Mix(
-  (not(disabled))(
+  (not(hover))(
     scale(1.2),
   ),
 );
@@ -155,6 +155,16 @@ final mix = Mix(
     ),
   ),
 );
+
+VBox(mix: mix, children: [
+  TextMix(
+    'this will be upercased and bold',
+    // the variants must be provided here.
+    // multiple widgets can take the same variant
+    variants: [title],
+  ),
+  const TextMix('but this will not'),
+]),
 ```
 
 All other texts that are not marked as `title` will not be touched.
