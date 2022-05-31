@@ -14,7 +14,7 @@ visual properties between them.
 In the following example `hover()` is a `Variant` that will be applied when a `Pressable` 
 triggers the hover state. The `bgColor` and `textColor` properties will be overridden with the new value when the variant applies
 
-```dart highlight="8-13"
+```dart highlight="4-7"
 final style = Mix(
   bgColor(MaterialTokens.colorScheme.primary),
   textColor($onPrimary),
@@ -29,6 +29,8 @@ Pressable(
   child: const TextMix('Button'),
 );
 ```
+
+<iframe width="100%" src="https://leoafarias.github.io/mix/#/docs/variants" />
 
 Variants can be extremely powerful, and allow you to create consistent variations of your 
 Widgets.
@@ -65,6 +67,8 @@ final mix = Mix(
 );
 ```
 
+<iframe width="100%" src="https://leoafarias.github.io/mix/#/docs/variants/or" />
+
 - `&`: when all of the variants apply
 
 ```dart highlight="3-6"
@@ -76,6 +80,8 @@ final mix = Mix(
   ),
 );
 ```
+
+<iframe width="100%" src="https://leoafarias.github.io/mix/#/docs/variants/and" />
 
 The `not` operator can also be called to execute the variant content only when the given
 variant is not called. For example:
@@ -102,6 +108,9 @@ These are `Variants` that will change based on different _gestures_ and state of
 - `focus()`: Applies attributes on focus.
 - `press()`: Applies attributes when pressing.
 - `disabled()`: Applies attributes when disabled.
+
+
+<iframe width="100%" src="https://leoafarias.github.io/mix/#/docs/variants/catalog/pressable" />
 
 ### Breakpoints
 
